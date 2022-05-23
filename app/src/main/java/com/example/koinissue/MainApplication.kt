@@ -1,6 +1,7 @@
 package com.example.koinissue
 
 import android.app.Application
+import me.vmodi.library.libraryModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -12,8 +13,7 @@ class MainApplication : Application() {
         startKoin {
             androidContext(this@MainApplication)
             androidLogger()
-
-            modules()
+            modules(libraryModule())
         }
     }
 }
