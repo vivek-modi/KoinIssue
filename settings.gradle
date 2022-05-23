@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url = uri("https://maven.pkg.github.com/vivek-modi/kotlinmultiplatfromproject")
+            credentials {
+                username = "vivek-modi"
+                password = "abc"
+            }
+        }
+    }
+}
+rootProject.name = "KoinIssue"
+include ':app'
